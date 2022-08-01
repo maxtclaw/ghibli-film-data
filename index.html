@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    
+</head>
+<body>
+
+        <header>
+            <div class="wrapper">
+
+                <h1>Ghibli Film Data</h1>
+                <p>Welcome! This is a website for looking up information on films by Studio Ghibli Inc. (株式会社スタジオジブリ), a Japanese animation film studio headquartered in Tokyo, Japan. Select a film from the drop-down list below to get started!</p>
+        
+                <div>
+                    <label for="films" class="info_tag">Choose a film: </label>
+                    <select name="films" id="films">
+                        <option value="">Loading the API...</option>
+                    </select>
+                </div>
+
+            </div>
+        </header>
+    
+        <main>
+            <div class="wrapper">
+
+                <section class="hidden">
+                    <img id="film_image" src="" alt="">
+        
+                    <div class = "info_div">
+                        <h2 id="title"></h2>
+                        <h3 id="original_title"></h3>
+                        <h3 id="original_title_romanised"></h3>
+                        
+                        <p id="release_date"></p>
+                        <p id="film_length"></p>
+                        <p id="director"></p>
+        
+                        <p id="description"></p>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+    
+        <footer>
+            <div class="wrapper">
+                <p>Made with the <a href="https://github.com/janaipakos/ghibliapi">Studio Ghibli API</a></p>
+                <p>Created at Juno College</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.6.0.js' integrity='sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=' crossorigin='anonymous'></script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>

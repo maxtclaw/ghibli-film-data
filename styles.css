@@ -1,0 +1,182 @@
+/* Setup */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 62.5%;}
+
+*, *:before, *:after {box-sizing: inherit; font-family: 'Montserrat', sans-serif;} 
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+/* General Styling */
+:root {
+    --styleBlue: #61d1b9;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 6.4rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+select {
+    min-width: 307px;
+}
+
+p,
+label,
+select,
+option {
+    font-size: 1.6rem;
+}
+
+label, 
+.info_tag {
+    font-weight: bold;
+}
+
+span, a {
+    font-size: inherit;
+    text-decoration: none;
+}
+
+img {  
+    width: auto;
+    height: 100%;
+    max-height: 400px;
+    
+    display: block;
+
+    border: 2px solid black;
+}
+
+.error {
+    font-size: 50px;
+    text-align: center;
+    color: red;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: var(--styleBlue);
+    padding: 32px 0 32px 0;
+}
+
+header p {
+    width: 75%
+}
+
+/* Main Styling */
+main {
+    height: auto;
+    min-height: 400px;
+    margin: 24px 0 24px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url('./Studio_Ghibli_logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section {
+    width: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+section img:hover {
+    transform: scale(1.03);
+    transition-duration: 0.2s;
+}
+
+.info_div {
+    margin-left: 50px;
+}
+
+#description {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* Footer Styling */
+footer .wrapper {
+    padding: 10px 0;
+    border-top: 1px solid var(--styleBlue);
+}
+
+footer p {
+    font-size: 1.4rem;
+    margin: 4px 0;
+}
+
+/* Media Queries */
+@media (max-width: 650px) {
+
+    h2, h3, .info_div p, #description {
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 24px;
+    }
+    
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info_div {
+        margin-left: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
